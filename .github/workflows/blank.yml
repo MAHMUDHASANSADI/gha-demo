@@ -15,7 +15,7 @@ jobs:
     steps:
       
       # Runs a single command using the runners shell
-      - name: hello steo
+      - name: hello step
         run: |
           echo "Hello, world!"
           echo "Hello, Sadis world!"
