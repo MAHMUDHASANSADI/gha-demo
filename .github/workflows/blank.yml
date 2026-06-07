@@ -7,15 +7,21 @@ on: workflow_dispatch
   
 jobs:
   # This workflow contains a single job called "build"
-  hello:
+  build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
+    steps: 
+      - name: Build Step
+        run: echo "App is building"
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
+  test:
+    runs-on: ubuntu-latest
     steps:
-      
-      # Runs a single command using the runners shell
-      - name: hello step
-        run: |
-          echo "Hello, world!"
-          echo "Hello, Sadis world!"
+      - name: test steps
+        run: echo "App is testing"
+
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: App is Deploying
+        run: echo "app is deployed"
